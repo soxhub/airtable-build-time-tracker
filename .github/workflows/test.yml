@@ -30,17 +30,14 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Test
-        run: yarn test
 
       - name: Build
         run: yarn build
 
-      - name: Send code coverage to airtable
+      - name: Send build time to airtable;
         uses: ./
         with:
-          airtable_base_id: 'appLbaDteXtEGFCaX'
-          airtable_field_name: 'coveragePercentage'
-          airtable_record_id: 'recE6Toisu1GLrg5T'
-          airtable_table_name: 'Repos'
+          airtable_base_id: 'appTSR8XIzUujbT9B'
+          airtable_table_name: 'tblZ5WBM899aD46b9'
           airtable_token: ${{ secrets.AIRTABLE_TOKEN }}
+          buildStepName: 'Setup module dependencies cache'

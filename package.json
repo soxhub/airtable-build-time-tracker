@@ -44,16 +44,6 @@
   },
   "jest": {
     "clearMocks": true,
-    "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "coveragePathIgnorePatterns": [
-      "test"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 100
-      }
-    },
     "preset": "ts-jest",
     "restoreMocks": true,
     "testEnvironment": "node",
@@ -61,6 +51,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
     "airtable": "^0.11.5",
     "bignumber.js": "^9.1.0",
     "xml2js": "^0.4.23"
