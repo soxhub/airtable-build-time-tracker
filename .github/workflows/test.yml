@@ -40,4 +40,4 @@ jobs:
           airtable_base_id: 'appTSR8XIzUujbT9B'
           airtable_table_name: 'tblZ5WBM899aD46b9'
           airtable_token: ${{ secrets.AIRTABLE_TOKEN }}
-          buildStepName: 'Setup module dependencies cache'
+          build_step_name: 'Setup module dependencies cache'
