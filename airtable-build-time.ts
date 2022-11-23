@@ -23,8 +23,8 @@ export default async function run() {
 
     const buildTime = 0;
 
-    core.info(`payload: ${github.context.payload}`);
-    core.info(`Build time: $buildTime}`);
+    core.info(`payload: ${JSON.stringify(github.context.payload)}`);
+    core.info(`Build time: ${buildTime}`);
 
     // github.context.payload.steps.forEach((step: any) => {
     //   if (step.name === buildStepName) {
