@@ -23,6 +23,8 @@ export default async function run() {
 
     let buildTime = 0;
 
+    core.info(`Build time: ${github.context.payload.workflow_run}`);
+
     github.context.payload.steps.forEach((step: any) => {
       if (step.name === buildStepName) {
         const { started_at, completed_at } = step;
