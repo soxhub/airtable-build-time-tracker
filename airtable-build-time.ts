@@ -15,15 +15,16 @@ export default async function run() {
     const airtableBaseId = core.getInput('airtable_base_id', { required: true });
     const airtableTableName = core.getInput('airtable_table_name', { required: true });
     const airtableToken = core.getInput('airtable_token', { required: true });
-    const buildStepName = core.getInput('build_step_name', { required: true });
+    // const buildStepName = core.getInput('build_step_name', { required: true });
 
     Airtable.configure({ apiKey: airtableToken });
 
     const airtable = Airtable.base(airtableBaseId);
 
-    let buildTime = 0;
+    const buildTime = 0;
 
-    core.info(`Build time: ${github.context.payload}`);
+    core.info(`payload: ${github.context.payload}`);
+    core.info(`Build time: $buildTime}`);
 
     // github.context.payload.steps.forEach((step: any) => {
     //   if (step.name === buildStepName) {
