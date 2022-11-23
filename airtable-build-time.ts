@@ -23,19 +23,19 @@ export default async function run() {
 
     let buildTime = 0;
 
-    core.info(`Build time: ${github.context.payload.workflow_run}`);
+    core.info(`Build time: ${github.context.payload}`);
 
-    github.context.payload.steps.forEach((step: any) => {
-      if (step.name === buildStepName) {
-        const { started_at, completed_at } = step;
+    // github.context.payload.steps.forEach((step: any) => {
+    //   if (step.name === buildStepName) {
+    //     const { started_at, completed_at } = step;
 
-        const elapsedTime = new Date(completed_at).getTime() - new Date(started_at).getTime();
+    //     const elapsedTime = new Date(completed_at).getTime() - new Date(started_at).getTime();
 
-        core.info(`Build time: ${elapsedTime}ms`);
+    //     core.info(`Build time: ${elapsedTime}ms`);
 
-        buildTime = elapsedTime;
-      }
-    });
+    //     buildTime = elapsedTime;
+    //   }
+    // });
 
     await airtable(airtableTableName).create(
       [
