@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-import run from './airtable-code-coverage';
+import run from './airtable-build-time';
 
 /**
  * Run the action.
